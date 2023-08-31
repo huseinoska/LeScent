@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Order success message -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="alert alert-success text-center">
+                    <h4>Order Successful!</h4>
+                    <p>Your order has been placed successfully. Thank you for shopping with us!</p>
+                </div>
+                <p class="text-center">
+                    <a href="{% url 'index' %}" class="btn btn-primary">Continue Shopping</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

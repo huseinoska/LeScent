@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Product details -->
+
+    <div class="container mt-5 rounded" style="background-color: rgba(255, 255, 255, 0.78); border: 4px solid #F4DFD6;">
+    <br>
+        <br>
+
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="">
+            </div>
+            <div class="col-md-6">
+                <h2 class="d-flex justify-content-center" style="color: #332F2F;text-align: center;font-family: Oldenburg;font-size: 32px;font-style: normal;font-weight: 400;line-height: normal;">{{ product.name }}</h2>
+                <p style="font-weight: bold; color: #332F2F; ">PRODUCT DESCRIPTION</p>
+                <p style="color: #332F2F;font-family: Montserrat;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                 <form method="post" action="{% url 'add_to_cart' product.id %}">
+                   {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>
+            </div>
+        </div>
+    <br>
+    <br>
+
+    </div>
+{% endblock %}
