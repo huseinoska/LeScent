@@ -2,4 +2,4 @@
 Online Perfume Shop
 
 Линк до хостирана верзија на апликацијата:
-BelmaHuseinoska.pythonanywhere.com.
+https://BelmaHuseinoska.pythonanywhere.com.
